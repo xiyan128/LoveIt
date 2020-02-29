@@ -236,7 +236,7 @@
         {{- $res = minify $res -}}
     {{- end -}}
     {{- $res = $res | resources.Fingerprint "sha256" -}}
-    <script src="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}"></script>
+    <script src="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- /* Google analytics async */ -}}
