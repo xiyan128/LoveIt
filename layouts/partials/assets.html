@@ -224,7 +224,7 @@
         {{- $res = minify $res -}}
     {{- end -}}
     {{- $res = $res | resources.Fingerprint "sha256" -}}
-    <link rel="stylesheet" href="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}" crossorigin="anonymous">
 {{- end -}}
 
 {{- range $scratch.Get "scriptCDN" -}}
