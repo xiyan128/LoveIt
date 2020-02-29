@@ -33,7 +33,7 @@
                 {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" -}}
             </lastBuildDate>
         {{- end -}}
-        <atom:link href="{{.Permalink}}" rel="self" type="application/rss+xml" />
+        <atom:link href="{{.Permalink}}" type="application/rss+xml" />
         {{- range first 15 (where .Data.Pages "Type" "!=" "home") -}}
             <item>
                 <title>
