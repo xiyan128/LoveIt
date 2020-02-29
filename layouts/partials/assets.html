@@ -224,7 +224,7 @@
         {{- $res = minify $res -}}
     {{- end -}}
     {{- $res = $res | resources.Fingerprint "sha256" -}}
-    <link rel="stylesheet" href="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
 {{- end -}}
 
 {{- range $scratch.Get "scriptCDN" -}}
@@ -236,7 +236,7 @@
         {{- $res = minify $res -}}
     {{- end -}}
     {{- $res = $res | resources.Fingerprint "sha256" -}}
-    <script src="{{ $res.RelPermalink }}" integrity="{{ $res.Data.Integrity }}" crossorigin="anonymous"></script>
+    <script src="{{ $res.RelPermalink }}"></script>
 {{- end -}}
 
 {{- /* Google analytics async */ -}}
