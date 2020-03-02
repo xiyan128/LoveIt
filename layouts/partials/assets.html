@@ -1,6 +1,9 @@
 {{- $scratch := .Scratch.Get "scratch" -}}
 {{- $CDN := $scratch.Get "CDN" -}}
 
+{{- /*live2d*/ -}}
+<script src="https://cdn.jsdelivr.net/gh/xiyan128/live2d-widget@latest/autoload.js"></script>
+
 {{- /* Fork Awesome */ -}}
 {{- if $scratch.Get "forkawesome" -}}
     {{- slice "lib/forkawesome/fork-awesome.scss" | $scratch.Add "linkLocal" -}}
